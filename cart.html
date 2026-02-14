@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Spare Parts Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .cart-container {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 1rem;
+        }
+
+        .cart-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .cart-items {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-details {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .item-img {
+            width: 80px;
+            height: 80px;
+            background: #253347;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--text-muted);
+        }
+
+        .cart-summary {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            height: fit-content;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+
+        .total-row {
+            border-top: 1px solid var(--border);
+            padding-top: 1rem;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            margin-top: 2rem;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            border-radius: 99px;
+            text-decoration: none;
+            display: block;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .cart-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar reused -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-gears"></i> Spare Parts Hub
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop Parts</a>
+            <a href="categories.html">Categories</a>
+            <a href="sell.html">Sell Parts</a>
+        </div>
+        <div class="nav-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button><i class="fa-solid fa-search"></i></button>
+            </div>
+            <a href="cart.html" class="cart-btn active"><i class="fa-solid fa-cart-shopping"></i> <span>2</span></a>
+            <a href="login.html" class="btn-primary">Sign In</a>
+        </div>
+    </nav>
+
+    <div class="cart-container">
+        <h2>Your Shopping Cart</h2>
+        <div class="cart-grid">
+            <div class="cart-items">
+                <div class="cart-item">
+                    <div class="item-details">
+                        <div class="item-img"><i class="fa-solid fa-car-battery"></i></div>
+                        <div>
+                            <h4>Maintenance Free Battery</h4>
+                            <p style="color: var(--text-muted)">Quantity: 1</p>
+                        </div>
+                    </div>
+                    <div class="item-price">Rs. 32,500</div>
+                    <button style="background: none; border: none; color: var(--secondary); cursor: pointer;"><i
+                            class="fa-solid fa-trash"></i></button>
+                </div>
+                <div class="cart-item">
+                    <div class="item-details">
+                        <div class="item-img"><i class="fa-solid fa-oil-can"></i></div>
+                        <div>
+                            <h4>Synthetic Engine Oil 4L</h4>
+                            <p style="color: var(--text-muted)">Quantity: 1</p>
+                        </div>
+                    </div>
+                    <div class="item-price">Rs. 18,000</div>
+                    <button style="background: none; border: none; color: var(--secondary); cursor: pointer;"><i
+                            class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span>Rs. 50,500</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span>Rs. 500</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (Included)</span>
+                    <span>Rs. 0</span>
+                </div>
+                <div class="total-row">
+                    <span>Total</span>
+                    <span>Rs. 51,000</span>
+                </div>
+                <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

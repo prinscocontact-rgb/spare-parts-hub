@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Parts - Spare Parts Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .sell-container {
+            max-width: 800px;
+            margin: 4rem auto;
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+
+        .sell-container h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            font-size: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: #0f172a;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-main);
+            outline: none;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+        }
+
+        .upload-area {
+            border: 2px dashed var(--border);
+            padding: 3rem;
+            text-align: center;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: rgba(15, 23, 42, 0.5);
+            margin-bottom: 2rem;
+        }
+
+        .upload-area:hover {
+            border-color: var(--primary);
+            background: rgba(15, 23, 42, 0.8);
+        }
+
+        .upload-area i {
+            font-size: 3rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .upload-area p {
+            color: var(--text-muted);
+        }
+
+        .btn-block {
+            width: 100%;
+            text-align: center;
+            font-size: 1.1rem;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar reused -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-gears"></i> Spare Parts Hub
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop Parts</a>
+            <a href="categories.html">Categories</a>
+            <a href="sell.html" class="active">Sell Parts</a>
+        </div>
+        <div class="nav-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button><i class="fa-solid fa-search"></i></button>
+            </div>
+            <a href="cart.html" class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> <span>0</span></a>
+            <a href="login.html" class="btn-primary">Sign In</a>
+        </div>
+    </nav>
+
+    <div class="sell-container">
+        <h2>List Your Spare Part</h2>
+        <form>
+            <div class="form-group">
+                <label>Product Title</label>
+                <input type="text" placeholder="e.g. Toyota Corolla 2018 Headlight">
+            </div>
+
+            <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div>
+                    <label>Category</label>
+                    <select>
+                        <option>Select Category</option>
+                        <option>Engine</option>
+                        <option>Body</option>
+                        <option>Electrical</option>
+                        <option>Transmission</option>
+                        <option>Interior</option>
+                        <option>Wheels/Tires</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Price (LKR)</label>
+                    <input type="number" placeholder="5000">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                <textarea rows="5" placeholder="Describe the condition, brand, and compatibility..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Upload Photos</label>
+                <div class="upload-area" onclick="document.getElementById('file-input').click()">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <p>Click to upload or drag and drop photos here</p>
+                    <p style="font-size: 0.8rem; margin-top: 0.5rem">(Max 5 images)</p>
+                    <input type="file" id="file-input" style="display: none" multiple>
+                </div>
+            </div>
+
+            <button type="button" class="btn-primary btn-block"
+                onclick="alert('Ad details submitted successfully! Your part is under review.')">Post Ad Now</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Spare Parts Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar reused -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-gears"></i> Spare Parts Hub
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop Parts</a>
+            <a href="categories.html" class="active">Categories</a>
+            <a href="sell.html">Sell Parts</a>
+        </div>
+        <div class="nav-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button><i class="fa-solid fa-search"></i></button>
+            </div>
+            <a href="cart.html" class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> <span>0</span></a>
+            <a href="login.html" class="btn-primary">Sign In</a>
+        </div>
+    </nav>
+
+    <div class="categories" style="background: transparent; min-height: 80vh;">
+        <h2>All Categories</h2>
+        <div class="category-grid">
+            <div class="category-card" onclick="location.href='shop.html?cat=engine'">
+                <i class="fa-solid fa-car-battery"></i>
+                <h3>Engine Parts</h3>
+            </div>
+            <div class="category-card" onclick="location.href='shop.html?cat=body'">
+                <i class="fa-solid fa-car-side"></i>
+                <h3>Body Kits</h3>
+            </div>
+            <div class="category-card" onclick="location.href='shop.html?cat=wheels'">
+                <i class="fa-solid fa-dharmachakra"></i>
+                <h3>Wheels & Tires</h3>
+            </div>
+            <div class="category-card" onclick="location.href='shop.html?cat=electronics'">
+                <i class="fa-solid fa-microchip"></i>
+                <h3>Electronics</h3>
+            </div>
+            <div class="category-card" onclick="location.href='shop.html?cat=interior'">
+                <i class="fa-solid fa-chair"></i>
+                <h3>Interior</h3>
+            </div>
+            <div class="category-card" onclick="location.href='shop.html?cat=access'">
+                <i class="fa-solid fa-wrench"></i>
+                <h3>Accessories</h3>
+            </div>
+            <div class="category-card" onclick="location.href='shop.html?cat=suspension'">
+                <i class="fa-solid fa-spring"></i>
+                <h3>Suspension</h3>
+            </div>
+            <div class="category-card" onclick="location.href='shop.html?cat=oil'">
+                <i class="fa-solid fa-oil-can"></i>
+                <h3>Fluids & Oils</h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

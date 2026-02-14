@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spare Parts Hub - Premium Auto Parts</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-gears"></i> Spare Parts Hub
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="shop.html">Shop Parts</a>
+            <a href="categories.html">Categories</a>
+            <a href="sell.html">Sell Parts (Upload)</a>
+        </div>
+        <div class="nav-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search for parts...">
+                <button><i class="fa-solid fa-search"></i></button>
+            </div>
+            <a href="cart.html" class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> <span id="cart-count">0</span></a>
+            <a href="login.html" class="btn-primary">Sign In</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Find The Perfect Part<br>For Your Vehicle</h1>
+            <p>High quality spare parts for all vehicle models. Upload your own parts to sell or browse our massive collection.</p>
+            <div class="hero-buttons">
+                <a href="shop.html" class="btn-primary">Shop Now</a>
+                <a href="sell.html" class="btn-secondary">Start Selling</a>
+            </div>
+        </div>
+        <div class="hero-image">
+           <!-- Placeholder for a nice car engine or parts image. I will implement a gradient/shape for now -->
+           <div class="car-shape"></div>
+        </div>
+    </header>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+            <div class="category-card" onclick="location.href='shop.html?cat=engine'">
+                <i class="fa-solid fa-car-battery"></i>
+                <h3>Engine Parts</h3>
+            </div>
+            <div class="category-card" onclick="location.href='shop.html?cat=body'">
+                <i class="fa-solid fa-car-side"></i>
+                <h3>Body Kits</h3>
+            </div>
+            <div class="category-card" onclick="location.href='shop.html?cat=wheels'">
+                <i class="fa-solid fa-dharmachakra"></i>
+                <h3>Wheels & Tires</h3>
+            </div>
+            <div class="category-card" onclick="location.href='shop.html?cat=electronics'">
+                <i class="fa-solid fa-microchip"></i>
+                <h3>Electronics</h3>
+            </div>
+            <div class="category-card" onclick="location.href='shop.html?cat=interior'">
+                <i class="fa-solid fa-chair"></i>
+                <h3>Interior</h3>
+            </div>
+            <div class="category-card" onclick="location.href='shop.html?cat=access'">
+                <i class="fa-solid fa-wrench"></i>
+                <h3>Accessories</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured">
+        <h2>Featured Products</h2>
+        <div class="product-grid" id="featured-products">
+            <!-- Products will be injected via JS -->
+             <div class="product-card">
+                <div class="product-img">
+                    <i class="fa-solid fa-box-open placeholder-icon"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Turbo Charger X500</h3>
+                    <p class="category">Engine</p>
+                    <div class="price-row">
+                        <span class="price">Rs. 45,000</span>
+                        <button class="add-cart"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+             <div class="product-card">
+                <div class="product-img">
+                     <i class="fa-solid fa-circle-notch placeholder-icon"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Alloy Wheel Set (17")</h3>
+                    <p class="category">Wheels</p>
+                    <div class="price-row">
+                        <span class="price">Rs. 120,000</span>
+                        <button class="add-cart"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+             <div class="product-card">
+                <div class="product-img">
+                     <i class="fa-solid fa-car-battery placeholder-icon"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Maintenance Free Battery</h3>
+                    <p class="category">Electronics</p>
+                    <div class="price-row">
+                        <span class="price">Rs. 32,500</span>
+                        <button class="add-cart"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+             <div class="product-card">
+                <div class="product-img">
+                     <i class="fa-solid fa-oil-can placeholder-icon"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Synthetic Engine Oil 4L</h3>
+                    <p class="category">Maintenance</p>
+                    <div class="price-row">
+                        <span class="price">Rs. 18,000</span>
+                        <button class="add-cart"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>Spare Parts Hub</h3>
+                <p>The best place to buy and sell authentic vehicle spare parts in Sri Lanka.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-col">
+                <h3>Payment Methods</h3>
+                <div class="payments">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-amex"></i>
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Spare Parts Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
